@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+data/embeddings/*.pkl
+data/attendance_logs/*.csv
+data/snapshots/
+models/*.onnx
+models/*.h5
+*.egg-info/
+dist/
+build/
+.DS_Store

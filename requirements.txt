@@ -1,0 +1,16 @@
+# Core
+opencv-python>=4.8.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Face recognition
+tensorflow>=2.13.0
+keras-facenet>=0.3.2
+
+# Utilities
+openpyxl>=3.1.2         # for Excel export
+Pillow>=10.0.0
+tqdm>=4.66.0
+
+# Optional: IP camera support
+# ffmpeg-python>=0.2.0

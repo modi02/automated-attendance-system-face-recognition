@@ -1,4 +1,4 @@
-# 🎓 Automated Attendance System using Face Recognition
+# Automated Attendance System using Face Recognition
 
 A real-time, offline-capable attendance management system powered by **YuNet** face detection and **FaceNet** embeddings. Supports webcam and 5G IP camera streams, with automated daily CSV logging via Pandas.
 
@@ -6,32 +6,32 @@ A real-time, offline-capable attendance management system powered by **YuNet** f
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔍 Real-Time Face Recognition
+### Real-Time Face Recognition
 - **YuNet** (OpenCV DNN) for fast, accurate multi-face detection — compatible with webcam and 5G IP camera RTSP streams
 - **FaceNet** 128-d embeddings extracted via `keras-facenet` for identity recognition
 - **Distance-based similarity matching** with configurable threshold (cosine or Euclidean)
 - Falls back to Haar cascade if the ONNX model is unavailable
 
-### 🧑‍🎓 Offline Student Registration
+### Offline Student Registration
 - Interactive webcam-based registration — captures 10 face samples per student
 - Embeddings stored persistently as **pickle** files (no cloud dependency)
 - CLI tools to list and remove registered students
 
-### 📋 Automated Attendance Logging
+### Automated Attendance Logging
 - Marks attendance on recognition with a configurable **cooldown period** (default: 5 min) to prevent duplicates
 - Records: Date, Name, Time, Status — saved to dated CSV files
 - Live on-screen counter showing students marked present
 
-### 📊 Report Generation
+### Report Generation
 - Daily attendance reports via CLI
 - 7-day pivot-table summary (student × date)
 - Excel export support via `openpyxl`
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 main.py
@@ -67,7 +67,7 @@ AttendanceLogger      ──►  Mark → Save to CSV
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 automated-attendance-system-face-recognition/
@@ -93,7 +93,7 @@ automated-attendance-system-face-recognition/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.9+
@@ -126,7 +126,7 @@ wget -O models/face_detection_yunet_2023mar.onnx \
 
 ---
 
-## 🖥️ Usage
+## Usage
 
 ### Step 1 — Register students
 ```bash
@@ -180,7 +180,7 @@ python report.py --export
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 All parameters are in `src/utils/config.py`:
 
@@ -194,7 +194,7 @@ All parameters are in `src/utils/config.py`:
 
 ---
 
-## 📊 Sample Attendance CSV
+## Sample Attendance CSV
 
 ```csv
 Date,Name,Time,Status
@@ -205,7 +205,7 @@ Date,Name,Time,Status
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 | Issue | Solution |
 |---|---|
@@ -213,12 +213,6 @@ Date,Name,Time,Status
 | `keras_facenet not found` | `pip install keras-facenet` or use TF SavedModel |
 | Low recognition accuracy | Lower `RECOGNITION_THRESHOLD` (e.g. 0.5) or capture more registration samples |
 | RTSP stream not opening | Verify camera IP, port, and credentials; install `ffmpeg` |
-
----
-
-## 📸 Screenshots
-
-> Add screenshots of your running system here.
 
 ---
 
